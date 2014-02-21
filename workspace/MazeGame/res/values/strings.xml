@@ -2,13 +2,15 @@
 <resources>
 
     
-   <string name="app_name">MazeMan</string>
+   <string name="app_name">MazeGame</string>
     <string name="btn_newgame">New Game</string>
     <string name="btn_exit">Exit</string>
-    <string name="levelSelect">Select Maze</string>
+    <string name="levelSelect">Select Maze - Time :6 minutes</string>
     <string name="finished_title">Congrats</string>
     <string name="finished_text">Level Cleared</string>
     <string name="finished_button">End Game</string>
-    
+     <string name="gameover_title">Game Over</string>
+    <string name="gameover_text">Level Failed</string>
+    <string name="gameover_button">Go to menu</string>
 
 </resources>
