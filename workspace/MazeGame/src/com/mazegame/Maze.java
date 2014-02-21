@@ -2,10 +2,15 @@ package com.mazegame;
 
 
 import java.io.Serializable;
+import java.util.Date;
 
 
 public class Maze implements Serializable {
 	
+
+	long t1;
+//	Date now = new Date();
+	//t1 = now.getTime();
 	private static final long serialVersionUID = 1L;
 
 	public static final int UP = 0, DOWN = 1, RIGHT = 2, LEFT = 3;
@@ -16,13 +21,14 @@ public class Maze implements Serializable {
 	private int currentX, currentY;   //stores the current location of the ball
 	private int finalX, finalY;       //stores the finishing of the maze
 	private boolean gameComplete;
-
+	
 	public int getMazeWidth() {
 		return sizeX;
 	}
 	public int getMazeHeight() {
 		return sizeY;
 	}
+	
 	public boolean move(int direction) {
 		boolean moved = false;
 		if(direction == UP) {

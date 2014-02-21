@@ -14,12 +14,13 @@ public class voice extends Activity{
 	 private static final int REQUEST_CODE = 1234;
 	 static int match = 0;
 	 static int flag = 0;
+	static int i = 0;
 	 public void onCreate(Bundle savedInstanceState)
 	    {
 	        super.onCreate(savedInstanceState);
 	        try{
 
-				  Thread.sleep(2000);
+				  Thread.sleep(500);
 				}
 			catch(InterruptedException ex){
 				  
@@ -57,24 +58,86 @@ public class voice extends Activity{
 	        if (matches.contains("down")) {
 	        	match =2;
 	        }
+	        flag = 1;
+	        i = i + 1000;
 	    }
 		super.onActivityResult(requestCode, resultCode, data);
 		finish();
 	}
 
-	
+	public static int geti()
+	{
+		/*try{
+
+			  Thread.sleep(500);
+			}
+		catch(InterruptedException ex){
+			  
+			}
+			*/
+		i = i + 5;
+		return i;
+	}
    
+	public static int initialize()
+	{
+		i = 0;
+		return i;
+	}
 	public static int getVariable()
     {
+		flag = 0;
         return match;
     }
 
 	public static int getflag()
 	{
+		
 		//flag = 0;
 		return flag;
 	}
+	public int first_time()
+	{
+		return 0;
 	}
 	
-
+	public static boolean q1()
+	{
+		if(i>23000 && i<25000)
+		{
+			i=25000;
+			return true;	
+		}
+		else
+		{
+			return false;
+		}	
+	}
+	
+	public static boolean q2()
+	{
+		if(i>50000 && i<52000)
+		{
+			i=52000;
+			return true;	
+		}
+		else
+		{
+			return false;
+		}	
+	}
+	public static boolean q3()
+	{
+		if(i>69000 && i<70000)
+		{
+			i=70000;
+			return true;	
+		}
+		else
+		{
+			return false;
+		}	
+	}
+	
+}
 
